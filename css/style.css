@@ -1,0 +1,25 @@
+* {
+    margin: 0 auto;
+
+  }
+  .navbar {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* Si estás utilizando contenedores, también puedes intentar esto */
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.owo {
+    background-image: url('https://www.portalveterinaria.com/upload/20220620110222close-up-on-veterinarian-taking-care-of-pet(1)_pv.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 700px;
+}
