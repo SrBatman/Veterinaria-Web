@@ -63,16 +63,32 @@
     color: #000000; /* Cambia esto al color que desees */
 }
 
+.segunda ul {
+    border-top: 2px solid red; 
+    padding: 20px;
+}
+
 .segunda {
-    height: 500px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.blank-space{
+    height: 200px;
+    background-color: #ffffff;
+}
+
 .tercera {
-    height: 700px;
+    height: 500px;
+    background-color: #4482af;
+}
+
+
+.cuarta {
+    height: 500px;
     background-color: #4482af;
 }
 
@@ -94,16 +110,87 @@
 }
 
 .carousel-inner img{
-    height: 700px;
+    height: 500px;
 }
 
 
 .carousel.slide{
-    width: 80%;
+    width: 60%;
 
 }
 
 .cuarta {
     height: 500px;
 
+}
+
+.cuarta h2{
+    text-align: center;
+    color: #fff;
+}
+
+
+
+.cuartabox {
+    position: relative;
+    height: 400px;
+  }
+  
+  .bluebox {
+    position: relative;
+    z-index: 2; 
+
+  }
+
+  .space {
+    height: 20px;
+  }
+  
+  .whitebox {
+    width: 650px;
+    height: 300px;
+    position: relative;
+    background-color: #fff;
+    left:300px;
+    z-index: 1;
+    bottom: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whitebox ul {
+    border-top: 2px solid red; 
+    padding: 20px;
+}
+
+
+.quintabox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px
+}
+
+.quintabox ul {
+    border-top: 2px solid red; 
+    padding: 20px;
+}
+
+.sexta {
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px; 
+}
+
+
+.septima {
+    height: 500px;
+    background-color: #4482af;
+}
+
+
+.septima .bluebox {
+    
 }
