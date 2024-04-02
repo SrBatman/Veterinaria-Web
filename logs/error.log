@@ -51,3 +51,49 @@ Stack trace:
 [02-Apr-2024 07:54:52 Europe/Berlin] Connected to SQL Server
 [02-Apr-2024 07:55:30 Europe/Berlin] Connected to SQL Server
 [02-Apr-2024 08:08:15 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:18:10 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:18:45 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:18:51 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:19:36 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:22:00 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:41:17 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:41:17 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid object name 'users'. in C:\xampp\htdocs\Veterinaria\vistas\login.php:20
+Stack trace:
+#0 C:\xampp\htdocs\Veterinaria\vistas\login.php(20): PDOStatement->execute()
+#1 C:\xampp\htdocs\Veterinaria\vistas\login.php(41): User->login('asdad', 'dsadsada')
+#2 {main}
+  thrown in C:\xampp\htdocs\Veterinaria\vistas\login.php on line 20
+[02-Apr-2024 08:49:30 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:49:34 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:49:34 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid object name 'users'. in C:\xampp\htdocs\Veterinaria\vistas\login.php:20
+Stack trace:
+#0 C:\xampp\htdocs\Veterinaria\vistas\login.php(20): PDOStatement->execute()
+#1 C:\xampp\htdocs\Veterinaria\vistas\login.php(41): User->login('saddsa', 'sadad')
+#2 {main}
+  thrown in C:\xampp\htdocs\Veterinaria\vistas\login.php on line 20
+[02-Apr-2024 08:51:46 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:51:48 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:51:48 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'email'. in C:\xampp\htdocs\Veterinaria\vistas\login.php:20
+Stack trace:
+#0 C:\xampp\htdocs\Veterinaria\vistas\login.php(20): PDOStatement->execute()
+#1 C:\xampp\htdocs\Veterinaria\vistas\login.php(41): User->login('saddsa', 'sadad')
+#2 {main}
+  thrown in C:\xampp\htdocs\Veterinaria\vistas\login.php on line 20
+[02-Apr-2024 08:58:42 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:58:44 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:58:45 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'id'. in C:\xampp\htdocs\Veterinaria\vistas\login.php:20
+Stack trace:
+#0 C:\xampp\htdocs\Veterinaria\vistas\login.php(20): PDOStatement->execute()
+#1 C:\xampp\htdocs\Veterinaria\vistas\login.php(41): User->login('saddsa', 'sadad')
+#2 {main}
+  thrown in C:\xampp\htdocs\Veterinaria\vistas\login.php on line 20
+[02-Apr-2024 08:59:15 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:59:17 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:59:18 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:59:18 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\Veterinaria\vistas\login.php on line 23
+[02-Apr-2024 09:01:28 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 09:01:30 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 09:01:31 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 09:02:11 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 09:02:28 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 09:02:51 Europe/Berlin] Connected to SQL Server

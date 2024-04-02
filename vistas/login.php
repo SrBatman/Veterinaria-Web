@@ -9,26 +9,26 @@
       session_start();
       if (isset($_SESSION['user_id'])) {
         $this->user_id = $_SESSION['user_id'];
-        header('Location: http://localhost/Zoo/pages/login/index.php');
+        header('Location: http://localhost/Veterinaria/vistas/index.php');
         exit;
       }
     }
     
     public function login($email, $password) {
-      $stmt = $this->conn->prepare('SELECT id, email, passU FROM users WHERE email = ?');
-      $stmt->bind_param('s', $email);
+      $stmt = $this->conn->prepare('SELECT userId, email, passU FROM clinic_management.users WHERE email = ?');
+      $stmt->bindParam(1, $email);
       $stmt->execute();
-      $result = $stmt->get_result();
-      $user = $result->fetch_assoc();
-  
-      if ($user !== null && password_verify($password, $user['passU'])) {
-          $_SESSION['user_id'] = $user['id'];
-          header("Location: http://localhost/Zoo/pages/login/index.php");
+      $user = $stmt->fetch(PDO::FETCH_ASSOC);
+      // password_verify($password, $user['passU'])
+      if ($user !== null && $user) {
+          $_SESSION['user_id'] = $user['userId'];
+          header("Location: http://localhost/Veterinaria/vistas/index.php");
           exit;
       } else {
-          return 'Las credenciales son incorrectas';
+          return 'Las credenciales son incorrectas.';
       }
   }
+
 
   }
 
@@ -84,7 +84,7 @@
 <ul class="navbar-nav">
     <li class="nav-item">
         <span class="navbar-text">
-            <i class="bi bi-telephone"></i> 33-1023-2346
+            <i class="bi bi-telephone"></i> 331-567-8098
         </span>
     </li>
 </ul>
@@ -106,17 +106,19 @@
       <br>
       <br>
       <br>
-      <br>
-
-    <?php if(!empty($message)): ?>
+      <?php if(!empty($message)): ?>
       <p> <?= $message ?></p>
     <?php endif; ?>
+      <br>
+
+
     
-    <h1>Iniciar sesion</h1>
+    <!-- <h1>Iniciar sesion</h1> -->
+    <img src="../img/login-icon.png" alt="icon-login" height="100px"/>
     <!-- <span>ó <a href="signup.php">Registarse</a></span> -->
 
     <form action="login.php" method="POST">
-      <input name="email" type="text" placeholder="Introduce tu email">
+      <input name="email" type="text" placeholder="Introduce tu usuario">
       <input name="password" type="password" placeholder="Introduce tu contraseña">
       <input type="submit" value="Iniciar sesion">
     </form>
