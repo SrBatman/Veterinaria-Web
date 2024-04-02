@@ -1,0 +1,537 @@
+* {
+    margin: 0 auto;
+
+  }
+  .navbar {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+body {
+    margin-top: 60px; /* Ajusta este valor según el alto de tu encabezado */
+}
+
+.login-box{
+    background-color: white;
+    position: relative;
+    height: 500px;
+    width: 400px;
+    top: 80px;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Si estás utilizando contenedores, también puedes intentar esto */
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+
+}
+
+.content {
+    text-align: center;
+    height: 650px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.btn-secondary {
+    background-color: #365b77; /* Color de fondo azul */
+    color: white; /* Texto en color blanco para contraste */
+    border: 1px solid #3071a9; /* Borde más oscuro para profundidad */
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Sombra suave para efecto 3D */
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.2); /* Sombra en el texto para mejor legibilidad */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave para efectos de hover y focus */
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: #000a23; /* Color de fondo ligeramente más oscuro al pasar el mouse o enfocar */
+    border-color: #285e8e; /* Color de borde más oscuro para efecto de profundidad */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Sombra más pronunciada para efecto elevado */
+}
+
+.owo {
+
+    height: 500px;
+}
+
+.container-fluid.begin {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+input[type="text"], input[type="password"]{
+    outline: none;
+    padding: 20px;
+    display: block;
+    width: 300px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    border-color: #000;
+    border: 1px solid black;
+    margin: 20px auto;
+  }
+
+  
+  input[type="submit"] {
+    padding: 10px;
+    color: #fff;
+    background: #000;
+    width: 320px;
+    margin: 20px auto;
+    margin-top: 0;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+
+  input[type="submit"]:hover {
+    background-color: #00b8eb;
+  }
+  
+  
+  /* Main */
+  h2 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #fe9013;
+  
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding-top: 23px;
+  }
+  p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333b41;
+  }
+
+.left-side {
+    width: 40%;
+    background-color: rgb(102, 102, 102);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.left-side h1 {
+    color: white;
+    margin: auto;
+}
+
+.left-side .btn {
+    margin-bottom: 100px;
+    border-radius: 50px;
+    padding: 15px 80px; 
+    background-color: #261a69;
+    border-color: #261a69;
+}
+
+
+.right-side {
+     background-image: url('https://www.portalveterinaria.com/upload/20220620110222close-up-on-veterinarian-taking-care-of-pet(1)_pv.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 60%;
+}
+
+.navbar-text .bi-telephone {
+    color: #000000; /* Cambia esto al color que desees */
+}
+
+.segunda ul {
+    border-top: 2px solid red; 
+    padding: 20px;
+}
+
+.segunda {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blank-space{
+    height: 200px;
+    background-color: #ffffff;
+}
+
+.tercera {
+    height: 500px;
+    background-color: #4482af;
+}
+
+
+.cuarta {
+    height: 500px;
+    background-color: #4482af;
+}
+
+.myflexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+}
+
+.first-part{
+    width: 50%;
+    height: 40%;
+    text-align: center;
+    text-decoration: inherit;
+    justify-content: left;
+}
+
+.carousel-inner img{
+    height: 500px;
+}
+
+
+.carousel.slide{
+    width: 60%;
+
+}
+
+.cuarta {
+    height: 500px;
+
+}
+
+.cuarta h2{
+    text-align: center;
+    color: #fff;
+}
+
+
+
+.cuartabox {
+    position: relative;
+    height: 400px;
+  }
+  
+  .bluebox {
+    position: relative;
+    z-index: 2; 
+
+  }
+
+  .space {
+    height: 20px;
+  }
+  
+  .whitebox {
+    width: 650px;
+    height: 300px;
+    position: relative;
+    background-color: #fff;
+    left:300px;
+    z-index: 1;
+    bottom: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whitebox ul {
+    border-top: 2px solid red; 
+    padding: 20px;
+}
+
+
+.quintabox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px
+}
+
+.quintabox ul {
+    border-top: 2px solid red; 
+    padding: 20px;
+}
+
+.sexta {
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px; 
+}
+
+
+.septima {
+    height: 550px;
+    background-color: #4482af;
+}
+
+
+.septimabox {
+    position: relative;
+    height: 550px;
+  }
+  
+  .sbox {
+    position: relative;
+    z-index: 1; 
+
+  }
+  
+  .mybox {
+    width: 650px;
+    height: 380px;
+    position: relative;
+    background-color: #4482af;
+    color: #ffffff;
+    left:230px;
+    z-index: 2;
+    bottom: 465px;
+    display: flex;
+    flex-direction: column;
+}
+
+.productos {
+    border-top: 3px solid black; 
+    padding: 20px;
+}
+
+.ms {
+    position: relative;
+    margin-top: 50px;
+    right: 180px;
+}
+
+/* https://www.spmas.es/wp-content/uploads/2023/06/Clinica-veterinaria.jpg */
+
+.octava {
+    height: 500px;
+    background-image: url('https://www.spmas.es/wp-content/uploads/2023/06/Clinica-veterinaria.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* contact Section */
+
+#contact .contact {
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 90%;
+}
+#contact .contact-items {
+	/* max-width: 400px; */
+	width: 100%;
+}
+#contact .contact-item {
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0px 0px 18px 0 #0000002c;
+	transition: 0.3s ease box-shadow;
+}
+#contact .contact-item:hover {
+	box-shadow: 0px 0px 5px 0 #0000002c;
+}
+#contact .icon {
+	width: 70px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+#contact .contact-info h1 {
+	font-size: 2.5rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+#contact .contact-info h2 {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	font-weight: 500;
+}
+/*End contact Section */
+
+/* Footer */
+
+#footer {
+	background-image: linear-gradient(60deg, #10355f 0%, #426b97 100%);
+}
+#footer .footer {
+	min-height: 200px;
+	flex-direction: column;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+#footer h2 {
+	color: white;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: 0.1rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#footer .minilogo {
+	width: 250px;
+	height: 90%;
+}
+#footer .social-icon {
+	display: flex;
+	margin-bottom: 30px;
+}
+#footer .social-item {
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+}
+#footer .social-item img {
+	filter: grayscale(1);
+	transition: 0.3s ease filter;
+}
+#footer .social-item:hover img {
+	filter: grayscale(0);
+}
+#footer p {
+	color: white;
+	font-size: 1.3rem;
+}
+/* End Footer */
+
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 6rem;
+	}
+
+	/* main */
+	#main h1 {
+		font-size: 7rem;
+	}
+	/* End main */
+
+	/* mision Section */
+	#mision .service-bottom .service-item {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+	/* End mision Section */
+
+	/* Project */
+	#projects .project-item {
+		flex-direction: row;
+	}
+	#projects .project-item:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+	#projects .project-item {
+		height: 400px;
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+	#projects .all-projects .project-info {
+		height: 100%;
+	}
+	#projects .all-projects .project-img {
+		height: 100%;
+	}
+	/* End Project */
+
+	/* About */
+	#about .about {
+		flex-direction: row;
+	}
+	#about .col-left {
+		width: 600px;
+		height: 400px;
+		padding-left: 60px;
+	}
+	#about .about .col-left .about-img::after {
+		left: -45px;
+		top: 34px;
+		height: 98%;
+		width: 98%;
+		border: 10px solid cornflowerblue;
+	}
+	#about .col-right {
+		text-align: left;
+		padding: 30px;
+	}
+	#about .col-right h1 {
+		text-align: left;
+	}
+	/* End About */
+
+	/* contact  */
+	#contact .contact {
+		flex-direction: column;
+		padding: 100px 0;
+		align-items: center;
+		justify-content: center;
+		min-width: 20vh;
+	}
+	#contact .contact-items {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin: 0;
+	}
+	#contact .contact-item {
+		width: 30%;
+		margin: 0;
+		flex-direction: row;
+	}
+	#contact .contact-item .icon {
+		height: 100px;
+		width: 100px;
+	}
+	#contact .contact-item .icon img {
+		object-fit: contain;
+	}
+	#contact .contact-item .contact-info {
+		width: 100%;
+		text-align: left;
+		padding-left: 20px;
+	}
+	/* End contact  */
+}
+/* End Media Query For Tablet */

@@ -1,0 +1,53 @@
+[02-Apr-2024 06:45:42 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in C:\xampp\htdocs\Veterinaria\php\database.php:16
+Stack trace:
+#0 C:\xampp\htdocs\Veterinaria\php\database.php(16): error_log('Connected to SQ...', 3)
+#1 C:\xampp\htdocs\Veterinaria\php\database.php(27): DataBase->__construct()
+#2 C:\xampp\htdocs\Veterinaria\vistas\login.php(37): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\Veterinaria\php\database.php on line 16
+[02-Apr-2024 06:46:44 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 06:51:06 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 06:51:36 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 06:54:51 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 06:55:21 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 06:55:47 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 06:56:10 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 06:56:27 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:06:45 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:06:47 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:06:52 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:06:58 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:10:24 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:10:44 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:10:49 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:10:54 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:11:16 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:37:06 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:37:31 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:38:01 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:39:21 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:39:51 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:40:01 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:40:28 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:42:35 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:42:47 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:43:48 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:44:11 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:44:19 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:44:45 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:45:14 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:52:49 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:53:19 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:53:30 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:53:31 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:53:32 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:53:42 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:53:58 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:54:11 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:54:16 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:54:27 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:54:35 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:54:46 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:54:52 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 07:55:30 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 08:08:15 Europe/Berlin] Connected to SQL Server
