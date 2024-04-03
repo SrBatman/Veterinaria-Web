@@ -162,6 +162,10 @@ input[type="text"], input[type="password"]{
     width: 60%;
 }
 
+.bi-person {
+    color: #000000;
+}
+
 .navbar-text .bi-telephone {
     color: #000000; /* Cambia esto al color que desees */
 }

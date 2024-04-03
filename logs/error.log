@@ -97,3 +97,28 @@ Stack trace:
 [02-Apr-2024 09:02:11 Europe/Berlin] Connected to SQL Server
 [02-Apr-2024 09:02:28 Europe/Berlin] Connected to SQL Server
 [02-Apr-2024 09:02:51 Europe/Berlin] Connected to SQL Server
+[02-Apr-2024 19:53:47 Europe/Berlin] Connection failed: SQLSTATE[08001]: [Microsoft][ODBC Driver 17 for SQL Server]Named Pipes Provider: Could not open a connection to SQL Server [2]. 
+[02-Apr-2024 19:53:55 Europe/Berlin] Connection failed: SQLSTATE[08001]: [Microsoft][ODBC Driver 17 for SQL Server]Named Pipes Provider: Could not open a connection to SQL Server [2]. 
+[02-Apr-2024 19:55:40 Europe/Berlin] Connection failed: SQLSTATE[08001]: [Microsoft][ODBC Driver 17 for SQL Server]Named Pipes Provider: Could not open a connection to SQL Server [2]. 
+[02-Apr-2024 19:55:48 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:05:47 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:05:50 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:06:23 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:47:08 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:49:32 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:51:05 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:51:07 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:51:15 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:51:25 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:51:38 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:53:04 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:53:33 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:54:02 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:56:12 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:56:23 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:56:38 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:57:13 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 00:57:18 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 01:22:21 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 01:22:26 Europe/Berlin] Connected to SQL Server
+[03-Apr-2024 03:16:46 Europe/Berlin] Connected to SQL Server
