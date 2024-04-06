@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 * {
     margin: 0 auto;
 
@@ -7,31 +9,24 @@
     margin-left: 0;
 }
 
-body {
-    margin-top: 60px; /* Ajusta este valor según el alto de tu encabezado */
-}
-
-.login-box{
-    background-color: white;
-    position: relative;
-    height: 500px;
-    width: 400px;
-    top: 80px;
-}
-
-.back-video{
-    position: absolute;
-    right: 0;
+body, html {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    bottom: 0;
-    z-index: -1;
 }
 
-/* Si estás utilizando contenedores, también puedes intentar esto */
-.container-fluid {
-    padding-right: 0;
-    padding-left: 0;
+.titlecontent{
+	text-align: center;
+	height: 100px;
+	position: relative;
+	top: 100px;;
 
+}
+
+.epictitle {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .content {
@@ -43,6 +38,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+	background-color: #4482af;
     z-index: 100;
 }
 
@@ -62,70 +58,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Sombra más pronunciada para efecto elevado */
 }
 
-.owo {
 
-    height: 500px;
-}
-
-.container-fluid.begin {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-}
-
-input[type="text"], input[type="password"]{
-    outline: none;
-    padding: 20px;
-    display: block;
-    width: 300px;
-    border-radius: 3px;
-    border: 1px solid #eee;
-    border-color: #000;
-    border: 1px solid black;
-    margin: 20px auto;
-  }
-
-  
-  input[type="submit"] {
-    padding: 10px;
-    color: #fff;
-    background: #000;
-    width: 320px;
-    margin: 20px auto;
-    margin-top: 0;
-    border: 0;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-
-
-  input[type="submit"]:hover {
-    background-color: #00b8eb;
-  }
-  
-  
-  /* Main */
-  h2 {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 120%;
-    text-align: center;
-    color: #fe9013;
-  
-    margin-top: 5px;
-    margin-bottom: 20px;
-    padding-top: 23px;
-  }
-  p {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    color: #333b41;
-  }
 
 .left-side {
     width: 40%;
@@ -216,111 +149,6 @@ input[type="text"], input[type="password"]{
     justify-content: left;
 }
 
-.carousel-inner img{
-    height: 500px;
-}
-
-
-.carousel.slide{
-    width: 60%;
-
-}
-
-.cuarta {
-    height: 500px;
-
-}
-
-.cuarta h2{
-    text-align: center;
-    color: #fff;
-}
-
-
-
-.cuartabox {
-    position: relative;
-    height: 400px;
-  }
-  
-  .bluebox {
-    position: relative;
-    z-index: 2; 
-
-  }
-
-  .space {
-    height: 20px;
-  }
-  
-  .whitebox {
-    width: 650px;
-    height: 300px;
-    position: relative;
-    background-color: #fff;
-    left:300px;
-    z-index: 1;
-    bottom: 280px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.whitebox ul {
-    border-top: 2px solid red; 
-    padding: 20px;
-}
-
-
-.quintabox {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px
-}
-
-.quintabox ul {
-    border-top: 2px solid red; 
-    padding: 20px;
-}
-
-.sexta {
-    background-color: purple;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120px; 
-}
-
-
-.septima {
-    height: 550px;
-    background-color: #4482af;
-}
-
-
-.septimabox {
-    position: relative;
-    height: 550px;
-  }
-  
-  .sbox {
-    position: relative;
-    z-index: 1; 
-
-  }
-  
-  .mybox {
-    width: 650px;
-    height: 380px;
-    position: relative;
-    background-color: #4482af;
-    color: #ffffff;
-    left:230px;
-    z-index: 2;
-    bottom: 465px;
-    display: flex;
-    flex-direction: column;
-}
 
 .productos {
     border-top: 3px solid black; 
@@ -477,7 +305,8 @@ input[type="text"], input[type="password"]{
 
 
 .agregar-datos{
-    height: 1200px;
+    height: 1100px;
+    background-color: #00262a ;
 }
 
 .contenido{
@@ -496,112 +325,26 @@ input[type="text"], input[type="password"]{
    left: 270px;
 }
 
-.form-control input {
+.form-label  {
+    color: white;
+ 
+
+}
+
+.information {
+	font-family: "Bungee Spice", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+    line-height: 130%;
+    color: #4c962f;
+    text-align: center;
+    margin-top: 104px;
+    margin-bottom: 60px;
     position: relative;
-    bottom: 100px;
+    top: 50px;
 
-}
-/* Media Query For Tablet */
-@media only screen and (min-width: 768px) {
-	.cta {
-		font-size: 2.5rem;
-		padding: 20px 60px;
-	}
-	h1.section-title {
-		font-size: 6rem;
-	}
+  }
 
-	/* main */
-	#main h1 {
-		font-size: 7rem;
-	}
-	/* End main */
 
-	/* mision Section */
-	#mision .service-bottom .service-item {
-		flex-basis: 45%;
-		margin: 2.5%;
-	}
-	/* End mision Section */
 
-	/* Project */
-	#projects .project-item {
-		flex-direction: row;
-	}
-	#projects .project-item:nth-child(even) {
-		flex-direction: row-reverse;
-	}
-	#projects .project-item {
-		height: 400px;
-		margin: 0;
-		width: 100%;
-		border-radius: 0;
-	}
-	#projects .all-projects .project-info {
-		height: 100%;
-	}
-	#projects .all-projects .project-img {
-		height: 100%;
-	}
-	/* End Project */
 
-	/* About */
-	#about .about {
-		flex-direction: row;
-	}
-	#about .col-left {
-		width: 600px;
-		height: 400px;
-		padding-left: 60px;
-	}
-	#about .about .col-left .about-img::after {
-		left: -45px;
-		top: 34px;
-		height: 98%;
-		width: 98%;
-		border: 10px solid cornflowerblue;
-	}
-	#about .col-right {
-		text-align: left;
-		padding: 30px;
-	}
-	#about .col-right h1 {
-		text-align: left;
-	}
-	/* End About */
-
-	/* contact  */
-	#contact .contact {
-		flex-direction: column;
-		padding: 100px 0;
-		align-items: center;
-		justify-content: center;
-		min-width: 20vh;
-	}
-	#contact .contact-items {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
-		margin: 0;
-	}
-	#contact .contact-item {
-		width: 30%;
-		margin: 0;
-		flex-direction: row;
-	}
-	#contact .contact-item .icon {
-		height: 100px;
-		width: 100px;
-	}
-	#contact .contact-item .icon img {
-		object-fit: contain;
-	}
-	#contact .contact-item .contact-info {
-		width: 100%;
-		text-align: left;
-		padding-left: 20px;
-	}
-	/* End contact  */
-}
-/* End Media Query For Tablet */

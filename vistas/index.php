@@ -30,6 +30,10 @@ class User {
                 $_SESSION['user_data'] = $this->user;
             }
         }
+    } else {
+        // Redirige a otra página si $_SESSION['user_id'] no está establecido
+        header("Location: login.php");
+        exit();
     }
   }
 }
@@ -49,7 +53,6 @@ $user = new User($conn);
     <title>Veterinaria</title>
     <link rel="shortcut icon" href="../img/pies.png" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <?php require '../php/header.php' ?>

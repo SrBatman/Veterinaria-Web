@@ -18,79 +18,25 @@ if(session_status() === PHP_SESSION_NONE) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="../index.html">Inicio</a>
+                  <a class="nav-link" href="../vistas/index.php">Inicio</a>
                 </li>
-                <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Empleados
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Agregar</a>
-          <a class="dropdown-item" href="#">Modificar</a>
-          <a class="dropdown-item" href="#">Eliminar</a>
-          <!-- <div class="dropdown-divider"></div> -->
-          <a class="dropdown-item" href="#">Ver lista</a>
-        </div>
+                <li class="nav-item active">
+        <a class="nav-link" href="./empleados.php">Empleados</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Clientes
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Agregar</a>
-          <a class="dropdown-item" href="#">Modificar</a>
-          <a class="dropdown-item" href="#">Eliminar</a>
-          <!-- <div class="dropdown-divider"></div> -->
-          <a class="dropdown-item" href="#">Ver lista</a>
-        </div>
+      <li class="nav-item active">
+        <a class="nav-link" href="./clientes.php">Clientes</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Mascotas
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Agregar</a>
-          <a class="dropdown-item" href="#">Modificar</a>
-          <a class="dropdown-item" href="#">Eliminar</a>
-          <!-- <div class="dropdown-divider"></div> -->
-          <a class="dropdown-item" href="#">Ver lista</a>
-        </div>
+      <li class="nav-item active">
+        <a class="nav-link" href="./mascotas.php">Mascotas</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Descuentos
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Agregar</a>
-          <a class="dropdown-item" href="#">Modificar</a>
-          <a class="dropdown-item" href="#">Eliminar</a>
-          <!-- <div class="dropdown-divider"></div> -->
-          <a class="dropdown-item" href="#">Ver lista</a>
-        </div>
+      <li class="nav-item active">
+        <a class="nav-link" href="./descuentos.php">Descuentos</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Servicios
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Agregar</a>
-          <a class="dropdown-item" href="#">Modificar</a>
-          <a class="dropdown-item" href="#">Eliminar</a>
-          <!-- <div class="dropdown-divider"></div> -->
-          <a class="dropdown-item" href="#">Ver lista</a>
-        </div>
+      <li class="nav-item active">
+        <a class="nav-link" href="./servicios.php">Servicios</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Facturas
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Generar</a>
-          <a class="dropdown-item" href="#">Modificar</a>
-          <a class="dropdown-item" href="#">Eliminar</a>
-          <!-- <div class="dropdown-divider"></div> -->
-          <a class="dropdown-item" href="#">Ver lista</a>
-        </div>
+      <li class="nav-item active">
+        <a class="nav-link" href="./facturas.php">Facturas</a>
       </li>
               </ul>
 <ul class="navbar-nav">

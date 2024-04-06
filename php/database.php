@@ -5,8 +5,8 @@ class DataBase {
     public function __construct(){
         $host = "localhost";
         $database = "Veterinaria";
-        $username = "SuperAdmin";
-        $password = "patitas24!$";
+        $username = "root";
+        $password = "admin";
         $puerto = 1433;
         
         try {
@@ -14,6 +14,7 @@ class DataBase {
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
            
             error_log("Connected to SQL Server");
+            
         } catch (PDOException $e) {
             error_log("Connection failed: " . $e->getMessage());
             echo "Connection failed: " . $e->getMessage();
