@@ -95,6 +95,20 @@ body, html {
     width: 60%;
 }
 
+.texto-eliminado{
+    top: 50px;
+    position: relative;
+}
+
+.botones {
+   top: 60px;
+   position: relative;  
+}
+
+.btn-danger{
+    width: 120px ;
+}
+
 .bi-person {
     color: #000000;
 }
@@ -328,6 +342,21 @@ body, html {
 .form-label  {
     color: white;
  
+
+}
+
+.custom-modal .modal-dialog {
+    height: 110vh;  /* Cambia este valor al que desees */
+}
+
+.custom-modal .modal-content {
+    height: 100%;
+    background-color: #043b41d3 ;
+  
+}
+
+.custom-modal .modal-title {
+    color: white;
 
 }
 
