@@ -3,18 +3,18 @@
         <div class="modal-content">
           <div class="modal-header">
          
-            <h5 class="modal-title" id="exampleModalLongTitle">Eliminar empleado</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">Eliminar servicio</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <img src="../img/icons/delperson.png" alt="check" height="50px"/>
+          <img src="../img/icons/removedb.png" alt="check" height="50px"/>
           <div class="modal-body" id="modal-body">
-          <div id="del-employee-uno" style="text-align: center;"></div>
-          <div id="del-employee-dos" style="text-align: center;"></div>
-          <div id="del-employee-tres" style="text-align: center;"></div>
+          <div id="del-servicio-uno" style="text-align: center;"></div>
+          <div id="del-servicio-dos" style="text-align: center;"></div>
+          <div id="del-servicio-tres" style="text-align: center;"></div>
           <br>
-          ¿Estás seguro de que deseas eliminar al empleado?
+          ¿Estás seguro de que deseas eliminar el servicio?
          
            
           </div>

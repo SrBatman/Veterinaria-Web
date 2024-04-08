@@ -24,9 +24,14 @@ body, html {
 }
 
 .epictitle {
-  font-family: "Permanent Marker", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Bungee Spice", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+    line-height: 130%;
+    color: #4c962f;
+    text-align: center;
+   
+    position: relative;
 }
 
 .content {
@@ -353,6 +358,21 @@ body, html {
     height: 100%;
     background-color: #043b41d3 ;
   
+}
+
+.custom-modal-ignore .modal-dialog {
+    height: 110vh;
+
+}
+
+.custom-modal-ignore .modal-content {
+    height: 40%;
+    background-color: #043b41d3 ;
+}
+
+.custom-modal-ignore .modal-content {
+
+    color: white;
 }
 
 .custom-modal .modal-title {

@@ -79,7 +79,7 @@ $user = new User($conn);
 <tr>
     <th>ID</th> 
     <th>Nombre</th> 
-    <th>Apellido</th> 
+    <th>Apellidos</th> 
     <th>Puesto/Cargo</th>
     <th>&nbsp;</th>
     <th>&nbsp;&nbsp;</th>
@@ -91,7 +91,7 @@ $user = new User($conn);
 <?php 
 
 
-$stmt = $conn->prepare("SELECT *, puesto FROM clinic_management.empleado");
+$stmt = $conn->prepare("SELECT * FROM clinic_management.empleado");
 if (!$stmt) {
     echo "\nPDO::errorInfo():\n";
     error_log("Error en la consulta");
@@ -109,7 +109,7 @@ if(count($results) > 0) {
         echo "<tr>";
         echo "<td>".$row['empleadoId']."</td>";
         echo "<td>".$row['nombre']."</td>";
-        echo "<td>".$row['apellidoP']."</td>";
+        echo "<td>".$row['apellidoP']." ".$row['apellidoM']."</td>";
         echo "<td>".$row['puesto']."</td>";
         echo "<td>  <a href=\"./empleados.php?view&empleadoId=".$row['empleadoId']."&nombre=".$row['nombre']."&apellidoP=".$row['apellidoP']."&apellidoM=".$row['apellidoM']."&direccion=".$row['direccion']."&colonia=".$row['colonia']."&zp=".$row['zp']."&correo=".$row['email']."&telefono=".$row['telefono']."&puesto=".$row['puesto']."\"> Ver </a></td>";
         echo "<td>  <a href=\"./empleados.php?edit=".$row['empleadoId']."\"> Modificar </a></td>";
@@ -182,11 +182,11 @@ if(count($results) > 0) {
 
 </section> -->
 
-<?php require '../modals/modalAddE.php' ?>
-<?php require '../modals/modalAddEm.php' ?>
+<?php require '../modals/modalEmployee.php' ?>
+<?php require '../modals/modalAddedEm.php' ?>
 <?php require '../modals/modalDelE.php' ?>
 <?php require '../modals/modalShowE.php' ?>
-<?php require '../modals/modalEliE.php' ?>
+<?php require '../modals/modalDeleted.php' ?>
 
 <script src="../js/scripts.js"></script>
 
@@ -223,9 +223,12 @@ if(count($results) > 0) {
 <script>
 
   if (x.has('eliminado')){
+    
+    document.getElementById('modal-title').textContent = `¡Empleado eliminado!`;
+    document.getElementById('modal-owo').textContent = 'Se ha eliminado al empleado con éxito.';
     let componente = jQuery('#showEliminated')
         componente.modal('show')
-        console.log('adios')
+       
   }
 </script>
 <script>
