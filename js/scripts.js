@@ -134,3 +134,7 @@ function mostrarModalCliente(){
 function mostrarModalService(){
   $('#modalAddService').modal('show');
 };
+
+function mostrarModalDiscount(){
+  $('#modalAddDiscount').modal('show');
+};

@@ -74,7 +74,7 @@ $user = new User($conn);
 <h2 class="epictitle">Administracion de empleados</h2>
 </div>
 <div class="tabla-contenedor">
-
+<input type="text" id="search" placeholder="Buscar por nombre"/>
 <table class="tablita">
 <tr>
     <th>ID</th> 
@@ -121,7 +121,9 @@ if(count($results) > 0) {
 ?>
 </table>
 
+
 </div>
+
 <button type="button" class="btn btn-primary" style="position:relative; left:380px; top: 50px;" onclick="mostrarModal();">Nuevo empleado</button>
 </section>
 <!-- <section class="agregar-datos">
@@ -189,6 +191,7 @@ if(count($results) > 0) {
 <?php require '../modals/modalDeleted.php' ?>
 
 <script src="../js/scripts.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
       function redirigir(){
@@ -196,7 +199,7 @@ if(count($results) > 0) {
       }
 </script>
 
-
+<script src="../js/test.js"></script>
 
 <script>
     
