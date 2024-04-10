@@ -113,9 +113,9 @@ if(count($results) > 0) {
         echo "<td>".$row['especie']."</td>";
         echo "<td>".$row['raza']."</td>";
         echo "<td>".$row['OwnerName']."</td>";
-        // echo "<td>  <a href=\"./servicios.php?view&servicioId=".$row['servicioId']."&tipo=".$row['tipo']."&apellidoP=".$row['apellidoP']."&apellidoM=".$row['apellidoM']."&direccion=".$row['direccion']."&colonia=".$row['colonia']."&zp=".$row['zp']."&correo=".$row['email']."&telefono=".$row['telefono']."&puesto=".$row['puesto']."\"> Ver </a></td>";
-        // echo "<td>  <a href=\"./descuentos.php?edit=".$row['descuentoId']."\"> Modificar </a></td>";
-        // echo "<td>  <a href=\"./descuentos.php?delete&descuentoId=".$row['descuentoId']."&porcentaje=".$row['porcentaje']."&cantidad=".$row['cantidad']."\"> Eliminar </a></td>";
+        echo "<td>  <a href=\"./mascotas.php?view&mascotaId=".$row['mascotaId']."&nombre=".$row['PetName']."&especie=".$row['especie']."&raza=".$row['raza']."&edad=".$row['edad']."&peso=".$row['peso']."&sexo=".$row['sexo']."&estatus=".$row['estatus']."&owner=".$row['OwnerName']." ".$row['apellidoP']."\"> Ver </a></td>";
+        echo "<td>  <a href=\"./mascotas.php?edit=".$row['mascotaId']."\"> Modificar </a></td>";
+        echo "<td>  <a href=\"./mascotas.php?delete&mascotaId=".$row['mascotaId']."&nombre=".$row['PetName']."&especie=".$row['especie']."&raza=".$row['raza']."&owner=".$row['OwnerName']." \"> Eliminar </a></td>";
         echo "</tr>";
     }
   
@@ -126,74 +126,18 @@ if(count($results) > 0) {
 </div>
 <button type="button" class="btn btn-primary" style="position:relative; left:380px; top: 50px;" onclick="mostrarModalPet();">Nueva mascota</button>
 </section>
-<!-- <section class="agregar-datos">
 
-<h3 class="information">Nuevo empleado</h3>
-<div style="width: 500px; height: 500px; margin: auto;">
-        <form method="post" action="../controllers/addemployee.php" onsubmit="return validarEmpleados();">
-          <div class="form-group">
-            <label for="nombre" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="nombreHelp">
-            <div id="nombreHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="apellidoP" class="form-label">Apellido Paterno:</label>
-            <input type="text" class="form-control" id="apellidoP" name="apellidoP" aria-describedby="apellidoPHelp">
-            <div id="apellidoPHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="apellidoM" class="form-label">Apellido Materno:</label>
-            <input type="text" class="form-control" id="apellidoM" name="apellidoM" aria-describedby="apellidoMHelp">
-            <div id="apellidoMHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="direccion" class="form-label">Direccion:</label>
-            <input type="text" class="form-control" id="direccion" name="direccion" aria-describedby="direccionHelp">
-            <div id="direccionHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="colonia" class="form-label">Colonia:</label>
-            <input type="text" class="form-control" id="colonia" name="colonia" aria-describedby="coloniaHelp">
-            <div id="direccionHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="zp" class="form-label">Codigo postal:</label>
-            <input type="text" class="form-control" id="zp" name="zp" aria-describedby="zpHelp">
-            <div id="zpHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="correo" class="form-label">Email:</label>
-            <input type="email" class="form-control" id="correo" name="correo" aria-describedby="correoHelp">
-            <div id="correoHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
 
-          <div class="form-group">
-            <label for="telefono" class="form-label">Teléfono</label>
-            <input type="text" placeholder="## #### ####" class="form-control" id="telefono" name="telefono">
-            <div id="telefonoHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="puesto" class="form-label">Puesto:</label>
-            <input type="text" class="form-control" id="puesto" name="puesto" aria-describedby="puestoHelp">
-            <div id="puestoHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <button type="submit" class="btn btn-primary">Agregar</button>
-        </form>
- 
-      </div>
-
-</section> -->
-
-<?php require '../modals/modalDiscount.php' ?>
-<?php require '../modals/modalAddedD.php' ?>
-<?php require '../modals/modalDelD.php' ?>
-<?php require '../modals/modalDeleted.php' ?>
+<!-- <?php require '../modals/modalPet.php' ?>
+<?php require '../modals/modalAddedM.php' ?>
+<?php require '../modals/modalDelM.php' ?>
+<?php require '../modals/modalDeleted.php' ?> -->
 
 <script src="../js/scripts.js"></script>
 
 <script>
       function redirigir(){
-        window.location.href = "./descuentos.php";
+        window.location.href = "./mascotas.php";
       }
 </script>
 
@@ -203,18 +147,54 @@ if(count($results) > 0) {
     
     const x = new URLSearchParams(window.location.search);
     if (x.has('delete')){
-    let id = x.get('descuentoId');
-    let porcentaje = x.get('porcentaje');
-    let cantidad = x.get('cantidad');
+    let id = x.get('mascotaId');
+    let name = x.get('PetName');
+    let especie = x.get('especie');
+    let raza = x.get('raza');
+    let owner = x.get('owner');
 
 
 
     // Modificar el contenido del cuerpo del modal
-    if (id && porcentaje && cantidad) {
-        document.getElementById('del-descuento-uno').textContent = `DescuentoId: ${id}`;
-        document.getElementById('del-descuento-dos').textContent = `Descuento: ${porcentaje}%`;
-        document.getElementById('del-descuento-tres').textContent = `Cantidad requerida: ${cantidad}`;
+    if (id && name && especie && raza && owner) {
+        document.getElementById('del-mascota-uno').textContent = `MascotaId: ${id}`;
+        document.getElementById('del-mascota-dos').textContent = `Nombre: ${name}%`;
+        document.getElementById('del-mascota-tres').textContent = `Especie: ${especie}`;
+        document.getElementById('del-mascota-cuatro').textContent = `Raza: ${raza}`;
+        document.getElementById('del-mascota-cinco').textContent = `Dueño: ${owner}`;
         let componente = jQuery('#modalDeleteConfirm')
+        componente.modal('show')
+    }
+    }
+   
+</script>
+
+<script>
+    
+    if (x.has('view')){
+    let id = x.get('mascotaId');
+    let name = x.get('nombre');
+    let especie = x.get('especie');
+    let raza = x.get('raza');
+    let edad = x.get('edad');
+    let peso = x.get('peso');
+    let sexo = x.get('sexo');
+    let estatus = x.get('estatus');
+    let owner = x.get('owner');
+
+
+    // Modificar el contenido del cuerpo del modal
+    if (id && name && especie && raza && edad && peso && sexo && estatus && owner) {
+        document.getElementById('mascota-uno').textContent = `MascotaId: ${id}`;
+        document.getElementById('mascota-dos').textContent = `Nombre: ${name}`;
+        document.getElementById('mascota-tres').textContent = `Especie: ${especie}`;
+        document.getElementById('mascota-cuatro').textContent = `Raza: ${raza}`;
+        document.getElementById('mascota-cinco').textContent = `Edad: ${edad}`;
+        document.getElementById('mascota-seis').textContent = `Peso: ${peso}`;
+        document.getElementById('mascota-siete').textContent = `Sexo: ${sexo}`;
+        document.getElementById('mascota-ocho').textContent = `Activo: ${estatus}`;
+        document.getElementById('mascota-nueve').textContent = `Dueño: ${owner}`;
+        let componente = jQuery('#showInfo')
         componente.modal('show')
     }
     }
@@ -224,8 +204,8 @@ if(count($results) > 0) {
 
   if (x.has('eliminado')){
 
-    document.getElementById('modal-title').textContent = `¡Descuento eliminado!`;
-    document.getElementById('modal-owo').textContent = 'Se ha eliminado el descuento con éxito.';
+    document.getElementById('modal-title').textContent = `¡Mascota eliminada!`;
+    document.getElementById('modal-owo').textContent = 'Se ha eliminado la mascota con éxito.';
    
     let componente = jQuery('#showEliminated')
         componente.modal('show')
@@ -234,9 +214,9 @@ if(count($results) > 0) {
 
 
 <script>
-      function eliminarDescuento(){
-        let id = x.get('descuentoId');
-        window.location.href = `../controllers/deldiscount.php?res=${id}`;
+      function eliminarMascota(){
+        let id = x.get('mascotaId');
+        window.location.href = `../controllers/delpet.php?res=${id}`;
       }
 </script>
 

@@ -188,3 +188,8 @@ function mostrarModalService(){
 function mostrarModalDiscount(){
   $('#modalAddDiscount').modal('show');
 };
+
+
+function mostrarModalPet(){
+  $('#modalAddPet').modal('show');
+};
