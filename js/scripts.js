@@ -114,12 +114,62 @@ function validarServicios() {
       input.classList.remove('is-invalid');
     }
 
+    if (campo === 'precio') {
+      let regex = /^\d+(\.\d{1,2})?$/;
+      if (!regex.test(input.value)) {
+        input.classList.add('is-invalid');
+        isValid = false;
+      }
+    }
+
   
   });
  
     return isValid;
   
 };
+
+function validarDescuento() {
+      
+    let campos = [ 'porcentaje', 'cantidad'];
+  
+    let isValid = true;
+  
+    campos.forEach(function(campo) {
+  
+      let input = document.getElementById(campo);
+    
+      if (!input.value) {
+      
+        input.classList.add('is-invalid');
+        isValid = false;
+      } else {
+  
+        input.classList.remove('is-invalid');
+      }
+
+      if (campo === 'porcentaje') {
+        let regex = /^\d+$/;
+        if (!regex.test(input.value)) {
+          input.classList.add('is-invalid');
+          isValid = false;
+        }
+      }
+  
+      if (campo === 'cantidad') {
+        let regex = /^\d+$/;
+        if (!regex.test(input.value)) {
+          input.classList.add('is-invalid');
+          isValid = false;
+        }
+      }
+  
+    
+    });
+  
+      return isValid;
+    
+  }
 
 function mostrarModal(){
   $('#modalAddEmployee').modal('show');

@@ -256,7 +256,7 @@ if(count($results) > 0) {
 </script>
 
 <script>
-      function eliminarEmpleado(){
+      function eliminarServicio(){
         let id = x.get('servicioId');
         window.location.href = `../controllers/delservice.php?res=${id}`;
       }

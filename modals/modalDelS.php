@@ -19,7 +19,7 @@
            
           </div>
           <div class="modal-footer">
-          <button type="button" class="btn btn-danger" onclick="eliminarEmpleado()">Confirmar</button>
+          <button type="button" class="btn btn-danger" onclick="eliminarServicio()">Confirmar</button>
           <button type="button" class="btn btn-warning" onclick="redirigir()">Cancelar</button>
           </div>
         </div>

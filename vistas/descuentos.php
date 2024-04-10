@@ -110,7 +110,7 @@ if(count($results) > 0) {
         echo "<td>".$row['cantidad']."</td>";
         // echo "<td>  <a href=\"./servicios.php?view&servicioId=".$row['servicioId']."&tipo=".$row['tipo']."&apellidoP=".$row['apellidoP']."&apellidoM=".$row['apellidoM']."&direccion=".$row['direccion']."&colonia=".$row['colonia']."&zp=".$row['zp']."&correo=".$row['email']."&telefono=".$row['telefono']."&puesto=".$row['puesto']."\"> Ver </a></td>";
         echo "<td>  <a href=\"./descuentos.php?edit=".$row['descuentoId']."\"> Modificar </a></td>";
-        echo "<td>  <a href=\"./descuentos.php?delete&descuentoId=".$row['descuentoId']."&cantidad=".$row['cantidad']."\"> Eliminar </a></td>";
+        echo "<td>  <a href=\"./descuentos.php?delete&descuentoId=".$row['descuentoId']."&porcentaje=".$row['porcentaje']."&cantidad=".$row['cantidad']."\"> Eliminar </a></td>";
         echo "</tr>";
     }
   
@@ -179,16 +179,16 @@ if(count($results) > 0) {
 
 </section> -->
 
-<?php require '../modals/modalService.php' ?>
-<?php require '../modals/modalAddedS.php' ?>
-<?php require '../modals/modalDelS.php' ?>
+<?php require '../modals/modalDiscount.php' ?>
+<?php require '../modals/modalAddedD.php' ?>
+<?php require '../modals/modalDelD.php' ?>
 <?php require '../modals/modalDeleted.php' ?>
 
 <script src="../js/scripts.js"></script>
 
 <script>
       function redirigir(){
-        window.location.href = "./servicios.php";
+        window.location.href = "./descuentos.php";
       }
 </script>
 
@@ -198,17 +198,17 @@ if(count($results) > 0) {
     
     const x = new URLSearchParams(window.location.search);
     if (x.has('delete')){
-    let id = x.get('servicioId');
-    let tipo = x.get('tipo');
-    let precio = x.get('precio');
+    let id = x.get('descuentoId');
+    let porcentaje = x.get('porcentaje');
+    let cantidad = x.get('cantidad');
 
 
 
     // Modificar el contenido del cuerpo del modal
-    if (id && tipo && precio) {
-        document.getElementById('del-servicio-uno').textContent = `ServicioId: ${id}`;
-        document.getElementById('del-servicio-dos').textContent = `Servicio: ${tipo}`;
-        document.getElementById('del-servicio-tres').textContent = `Puesto: ${parseFloat(precio).toLocaleString()}`;
+    if (id && porcentaje && cantidad) {
+        document.getElementById('del-descuento-uno').textContent = `DescuentoId: ${id}`;
+        document.getElementById('del-descuento-dos').textContent = `Descuento: ${porcentaje}%`;
+        document.getElementById('del-descuento-tres').textContent = `Cantidad requerida: ${cantidad}`;
         let componente = jQuery('#modalDeleteConfirm')
         componente.modal('show')
     }
@@ -219,46 +219,19 @@ if(count($results) > 0) {
 
   if (x.has('eliminado')){
 
-    document.getElementById('modal-title').textContent = `¡Servicio eliminado!`;
-    document.getElementById('modal-owo').textContent = 'Se ha eliminado el servicio con éxito.';
+    document.getElementById('modal-title').textContent = `¡Descuento eliminado!`;
+    document.getElementById('modal-owo').textContent = 'Se ha eliminado el descuento con éxito.';
    
     let componente = jQuery('#showEliminated')
         componente.modal('show')
   }
 </script>
-<script>
-    
-    if (x.has('view')){
-    let nombre = x.get('nombre');
-    let apellidoP = x.get('apellidoP');
-    let apellidoM = x.get('apellidoM');
-    let direccion = x.get('direccion');
-    let colonia = x.get('colonia');
-    let zp = x.get('zp');
-    let correo = x.get('correo');
-    let telefono = x.get('telefono');
-    let puesto = x.get('puesto');
 
-
-    // Modificar el contenido del cuerpo del modal
-    if (nombre && apellidoP && apellidoM) {
-        document.getElementById('employee-nombre').textContent = `Nombre: ${nombre}`;
-        document.getElementById('employee-apellidos').textContent = `Apellidos: ${apellidoP} ${apellidoM}`;
-        document.getElementById('employee-direccion').textContent = `Dirección: ${direccion}, ${colonia}, ${zp}`;
-        document.getElementById('employee-correo').textContent = `Correo: ${correo}`;
-        document.getElementById('employee-telefono').textContent = `Teléfono: ${telefono}`;
-        document.getElementById('employee-puesto').textContent = `Puesto: ${puesto}`;
-        let componente = jQuery('#showInfo')
-        componente.modal('show')
-    }
-    }
-   
-</script>
 
 <script>
-      function eliminarEmpleado(){
-        let id = x.get('servicioId');
-        window.location.href = `../controllers/delservice.php?res=${id}`;
+      function eliminarDescuento(){
+        let id = x.get('descuentoId');
+        window.location.href = `../controllers/deldiscount.php?res=${id}`;
       }
 </script>
 
@@ -266,13 +239,13 @@ if(count($results) > 0) {
     // Obtener los parámetros de la URL
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('res')){
-      let nombre  = urlParams.get('tipo');
-      let costo = urlParams.get('precio');
+      let porcentaje  = urlParams.get('porcentaje');
+      let cantidad = urlParams.get('cantidad');
 
     // Modificar el contenido del cuerpo del modal
-    if (nombre && costo) {
-        document.getElementById('service-name').textContent = `Servicio: ${nombre}`;
-        document.getElementById('service-cost').textContent = `Precio: ${costo}`;
+    if (porcentaje && cantidad) {
+        document.getElementById('descuento-porcentaje').textContent = `Descuento: ${porcentaje}%`;
+        document.getElementById('descuento-cantidad').textContent = `Cantidad requerida: ${cantidad}`;
         let componente = jQuery('#modalExito')
         componente.modal('show')
     }
