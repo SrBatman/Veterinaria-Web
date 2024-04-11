@@ -107,77 +107,23 @@ if(count($results) > 0) {
         echo "<tr>";
         echo "<td>".$row['servicioId']."</td>";
         echo "<td>".$row['tipo']."</td>";
-        echo "<td>".$row['precio']."</td>";
+        echo "<td>$".$row['precio']."</td>";
         // echo "<td>  <a href=\"./servicios.php?view&servicioId=".$row['servicioId']."&tipo=".$row['tipo']."&apellidoP=".$row['apellidoP']."&apellidoM=".$row['apellidoM']."&direccion=".$row['direccion']."&colonia=".$row['colonia']."&zp=".$row['zp']."&correo=".$row['email']."&telefono=".$row['telefono']."&puesto=".$row['puesto']."\"> Ver </a></td>";
         echo "<td>  <a href=\"./servicios.php?edit=".$row['servicioId']."\"> Modificar </a></td>";
         echo "<td>  <a href=\"./servicios.php?delete&servicioId=".$row['servicioId']."&tipo=".$row['tipo']."&precio=".$row['precio']."\"> Eliminar </a></td>";
         echo "</tr>";
     }
   
-} 
+}  else {
+  echo "<tr><td>No hay datos aun.</td></tr>";
+}
 ?>
 </table>
 
 </div>
 <button type="button" class="btn btn-primary" style="position:relative; left:380px; top: 50px;" onclick="mostrarModalService();">Nuevo servicio</button>
 </section>
-<!-- <section class="agregar-datos">
 
-<h3 class="information">Nuevo empleado</h3>
-<div style="width: 500px; height: 500px; margin: auto;">
-        <form method="post" action="../controllers/addemployee.php" onsubmit="return validarEmpleados();">
-          <div class="form-group">
-            <label for="nombre" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="nombreHelp">
-            <div id="nombreHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="apellidoP" class="form-label">Apellido Paterno:</label>
-            <input type="text" class="form-control" id="apellidoP" name="apellidoP" aria-describedby="apellidoPHelp">
-            <div id="apellidoPHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="apellidoM" class="form-label">Apellido Materno:</label>
-            <input type="text" class="form-control" id="apellidoM" name="apellidoM" aria-describedby="apellidoMHelp">
-            <div id="apellidoMHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="direccion" class="form-label">Direccion:</label>
-            <input type="text" class="form-control" id="direccion" name="direccion" aria-describedby="direccionHelp">
-            <div id="direccionHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="colonia" class="form-label">Colonia:</label>
-            <input type="text" class="form-control" id="colonia" name="colonia" aria-describedby="coloniaHelp">
-            <div id="direccionHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="zp" class="form-label">Codigo postal:</label>
-            <input type="text" class="form-control" id="zp" name="zp" aria-describedby="zpHelp">
-            <div id="zpHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="correo" class="form-label">Email:</label>
-            <input type="email" class="form-control" id="correo" name="correo" aria-describedby="correoHelp">
-            <div id="correoHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-
-          <div class="form-group">
-            <label for="telefono" class="form-label">Teléfono</label>
-            <input type="text" placeholder="## #### ####" class="form-control" id="telefono" name="telefono">
-            <div id="telefonoHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <div class="form-group">
-            <label for="puesto" class="form-label">Puesto:</label>
-            <input type="text" class="form-control" id="puesto" name="puesto" aria-describedby="puestoHelp">
-            <div id="puestoHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
-          <button type="submit" class="btn btn-primary">Agregar</button>
-        </form>
- 
-      </div>
-
-</section> -->
 
 <?php require '../modals/modalService.php' ?>
 <?php require '../modals/modalAddedS.php' ?>
@@ -208,7 +154,7 @@ if(count($results) > 0) {
     if (id && tipo && precio) {
         document.getElementById('del-servicio-uno').textContent = `ServicioId: ${id}`;
         document.getElementById('del-servicio-dos').textContent = `Servicio: ${tipo}`;
-        document.getElementById('del-servicio-tres').textContent = `Puesto: ${parseFloat(precio).toLocaleString()}`;
+        document.getElementById('del-servicio-tres').textContent = `Puesto: $${parseFloat(precio).toLocaleString()}`;
         let componente = jQuery('#modalDeleteConfirm')
         componente.modal('show')
     }
@@ -226,34 +172,7 @@ if(count($results) > 0) {
         componente.modal('show')
   }
 </script>
-<script>
-    
-    if (x.has('view')){
-    let nombre = x.get('nombre');
-    let apellidoP = x.get('apellidoP');
-    let apellidoM = x.get('apellidoM');
-    let direccion = x.get('direccion');
-    let colonia = x.get('colonia');
-    let zp = x.get('zp');
-    let correo = x.get('correo');
-    let telefono = x.get('telefono');
-    let puesto = x.get('puesto');
 
-
-    // Modificar el contenido del cuerpo del modal
-    if (nombre && apellidoP && apellidoM) {
-        document.getElementById('employee-nombre').textContent = `Nombre: ${nombre}`;
-        document.getElementById('employee-apellidos').textContent = `Apellidos: ${apellidoP} ${apellidoM}`;
-        document.getElementById('employee-direccion').textContent = `Dirección: ${direccion}, ${colonia}, ${zp}`;
-        document.getElementById('employee-correo').textContent = `Correo: ${correo}`;
-        document.getElementById('employee-telefono').textContent = `Teléfono: ${telefono}`;
-        document.getElementById('employee-puesto').textContent = `Puesto: ${puesto}`;
-        let componente = jQuery('#showInfo')
-        componente.modal('show')
-    }
-    }
-   
-</script>
 
 <script>
       function eliminarServicio(){
@@ -272,7 +191,7 @@ if(count($results) > 0) {
     // Modificar el contenido del cuerpo del modal
     if (nombre && costo) {
         document.getElementById('service-name').textContent = `Servicio: ${nombre}`;
-        document.getElementById('service-cost').textContent = `Precio: ${costo}`;
+        document.getElementById('service-cost').textContent = `Precio: $${parseFloat(costo).toLocaleString()}`;
         let componente = jQuery('#modalExito')
         componente.modal('show')
     }

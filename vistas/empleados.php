@@ -118,7 +118,9 @@ if(count($results) > 0) {
         echo "</tr>";
     }
   
-} 
+}  else {
+  echo "<tr><td>No hay datos aun.</td></tr>";
+}
 ?>
   </tbody>
 </table>

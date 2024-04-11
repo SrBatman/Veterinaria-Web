@@ -520,7 +520,49 @@ input[type="text"], input[type="password"]{
     text-align: left;
 }
 
+.a, .e, .i, .o, .u {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
+  .separador {
+    height: 200px;
+  }
+
+  .firstbox {
+    width: 50%;
+  }
+
+  .secondbox {
+    width: 50%;
+  }
+
+  .detalles {
+    height: 500px;
+  }
+
+  .cajaowo {
+    background-color: #fe9013;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid #000;
+  }
+
+  .custom-modal .modal-content {
+    background-color: #8a4e92e0 ;
+  
+}
+
+  .space-for-button {
+    height: 20px;
+  }
+
+  .caja-de-servicios {
+    min-height: 200px;
+    background-color: #ffffff;
+    min-width: 200px;
+  }
 
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {

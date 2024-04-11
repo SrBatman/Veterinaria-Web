@@ -120,7 +120,9 @@ if(count($results) > 0) {
         echo "</tr>";
     }
   
-} 
+}  else {
+    echo "<tr><td>No hay datos aun.</td></tr>";
+  }
 ?>
 </table>
 
@@ -203,7 +205,7 @@ if(count($results) > 0) {
         document.getElementById('mascota-tres').textContent = `Especie: ${especie}`;
         document.getElementById('mascota-cuatro').textContent = `Raza: ${raza}`;
         document.getElementById('mascota-cinco').textContent = `Edad: ${edad}`;
-        document.getElementById('mascota-seis').textContent = `Peso: ${peso}`;
+        document.getElementById('mascota-seis').textContent = `Peso: ${peso} kg`;
         document.getElementById('mascota-siete').textContent = `Sexo: ${sexo}`;
         document.getElementById('mascota-ocho').textContent = `Activo: ${estatus}`;
         document.getElementById('mascota-nueve').textContent = `Dueño: ${owner}`;

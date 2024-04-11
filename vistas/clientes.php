@@ -115,9 +115,11 @@ if(count($results) > 0) {
         echo "<td>  <a href=\"./clientes.php?edit=".$row['clienteId']."\"> Modificar </a></td>";
         echo "<td>  <a href=\"./clientes.php?delete&clienteId=".$row['clienteId']."&nombre=".$row['nombre']."&apellidoP=".$row['apellidoP']."&apellidoM=".$row['apellidoM']."&tel_cel=".$row['tel_cel']."\"> Eliminar </a></td>";
         echo "</tr>";
-    }
+    } 
   
-} 
+} else {
+  echo "<tr><td>No hay datos aun.</td></tr>";
+}
 ?>
 </table>
 

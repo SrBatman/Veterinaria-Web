@@ -194,6 +194,24 @@ function mostrarModalPet(){
   $('#modalAddPet').modal('show');
 };
 
+function modalPacientes(){
+  
+
+  // let cliente = document.getElementById('owner').value;
+  // let error =  $('#showErrorAlert')
+  // let menu = $('#modalMenu')
+  // if (!cliente.length) {
+ 
+  //   document.getElementById('modal-owo').textContent = 'Por favor seleccione un cliente antes de agregar un paciente.';
+  //   return error.modal('show');
+
+  // } else {
+  //    document.getElementById('owner').disabled = true;
+  //    window.location.href = `./index.php?clienteId=${cliente}`;
+  //    menu.modal('show');
+  // }
+
+}
 
 function validarMascotas(){
   let campos = ['nombre', 'especie', 'raza', 'edad', 'peso', 'sexo', 'owner'];
@@ -203,7 +221,7 @@ function validarMascotas(){
     campos.forEach(function(campo) {
      
       let input = document.getElementById(campo);
-      console.log(input.value)
+      
       if (!input.value) {
       
         input.classList.add('is-invalid');
@@ -218,4 +236,29 @@ function validarMascotas(){
   
       return isValid;
     
+}
+
+function validarPacientes(){
+  let campos =['mascotas', 'serviciosSelect'];
+  let isValid = true;
+   
+    campos.forEach(function(campo) {
+     
+      let input = document.getElementById(campo);
+      
+      if (!input.value) {
+      
+        input.classList.add('is-invalid');
+        isValid = false;
+
+  
+      } else {
+  
+        input.classList.remove('is-invalid');
+      }
+  
+    
+    });
+  
+      return isValid;
 }
