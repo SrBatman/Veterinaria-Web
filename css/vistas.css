@@ -356,7 +356,7 @@ body, html {
 
 .custom-modal .modal-content {
     height: 100%;
-    background-color: #043b41d3 ;
+    background-color: #8a4e92e0 ;
   
 }
 
@@ -365,9 +365,13 @@ body, html {
 
 }
 
+.negritas {
+    font-weight: bold;
+}
+
 .custom-modal-ignore .modal-content {
     height: 40%;
-    background-color: #043b41d3 ;
+    background-color: #8a4e92e0 ;
 }
 
 .custom-modal-ignore .modal-content {

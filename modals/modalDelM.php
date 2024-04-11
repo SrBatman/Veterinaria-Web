@@ -9,7 +9,7 @@
             </button>
           </div>
           <img src="../img/icons/removedb.png" alt="check" height="50px"/>
-          <div class="modal-body" id="modal-body">
+          <div class="modal-body" id="modal-body" style="text-align: center;">
           <div id="del-mascota-uno" style="text-align: center;"></div>
           <div id="del-mascota-dos" style="text-align: center;"></div>
           <div id="del-mascota-tres" style="text-align: center;"></div>

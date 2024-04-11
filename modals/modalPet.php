@@ -1,6 +1,3 @@
-<!-- <!-- <?php 
-require '../php/database.php';
-?> -->
 
 <div class="modal fade bd-example-modal-lg custom-modal" id="modalAddPet" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -15,71 +12,68 @@ require '../php/database.php';
           <img src="../img/icons/addPerson.png" alt="check" height="50px"/>
           <div class="modal-body" id="modal-body">
           <div style="width: 500px; height: 500px; margin: auto;">
-        <form method="post" action="../controllers/addemployee.php" onsubmit="return validarEmpleados();">
+
+        <form method="post" action="../controllers/addpet.php" onsubmit="return validarMascotas();">
           <div class="form-group">
             <label for="nombre" class="form-label">Nombre:</label>
             <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="nombreHelp">
             <div id="nombreHelp" class="form-text">&nbsp;&nbsp;</div>
           </div>
           <div class="form-group">
-            <label for="apellidoP" class="form-label">Especie:</label>
-            <input type="text" class="form-control" id="apellidoP" name="apellidoP" aria-describedby="apellidoPHelp">
-            <div id="apellidoPHelp" class="form-text">&nbsp;&nbsp;</div>
+            <label for="especie" class="form-label">Especie:</label>
+            <input type="text" class="form-control" id="especie" name="especie" aria-describedby="especieHelp">
+            <div id="especieHelp" class="form-text">&nbsp;&nbsp;</div>
           </div>
           <div class="form-group">
-            <label for="apellidoM" class="form-label">Raza:</label>
-            <input type="text" class="form-control" id="apellidoM" name="apellidoM" aria-describedby="apellidoMHelp">
-            <div id="apellidoMHelp" class="form-text">&nbsp;&nbsp;</div>
+            <label for="raza" class="form-label">Raza:</label>
+            <input type="text" class="form-control" id="raza" name="raza" aria-describedby="razaHelp">
+            <div id="razaHelp" class="form-text">&nbsp;&nbsp;</div>
           </div>
           <div class="form-group">
-            <label for="direccion" class="form-label">Edad:</label>
-            <input type="text" class="form-control" id="direccion" name="direccion" aria-describedby="direccionHelp">
-            <div id="direccionHelp" class="form-text">&nbsp;&nbsp;</div>
+            <label for="edad" class="form-label">Edad:</label>
+            <input type="number" class="form-control" id="edad" name="edad" aria-describedby="edadHelp">
+            <div id="edadHelp" class="form-text">&nbsp;&nbsp;</div>
           </div>
           <div class="form-group">
-            <label for="colonia" class="form-label">Peso:</label>
-            <input type="text" class="form-control" id="colonia" name="colonia" aria-describedby="coloniaHelp">
-            <div id="direccionHelp" class="form-text">&nbsp;&nbsp;</div>
+            <label for="peso" class="form-label">Peso:</label>
+            <input type="text" class="form-control" id="peso" name="peso" aria-describedby="pesoHelp">
+            <div id="pesoHelp" class="form-text">&nbsp;&nbsp;</div>
           </div>
           <div class="form-group">
-            <label for="zp" class="form-label">Sexo:</label>
-            <input type="text" class="form-control" id="zp" name="zp" aria-describedby="zpHelp">
+            <label for="sexo" class="form-label">Sexo:</label>
+            <select class="form-control" id="sexo" name="sexo">
+              <option value="">Seleccione</option>
+              <option>Hembra</option>
+              <option>Macho</option>
+            </select>
             <div id="zpHelp" class="form-text">&nbsp;&nbsp;</div>
           </div>
-
-          <?php 
-          
-          // Preparar la consulta SQL
-    $stmt = $conn->prepare("SELECT nombre, apellidoP FROM pet_care.cliente");
-
-    // Ejecutar la consulta
-    $stmt->execute();
-
-    // Iniciar el menú desplegable
-    echo '<select class="form-control" id="tipoParticipantes" name="tipoParticipantes">';
-    echo '<option value="">Seleccione</option>';
-
-    // Iterar sobre los resultados
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        echo '<option value="' . $row['nombre'] . '">' . $row['nombre'] . ' ' . $row['apellidoP'] . '</option>';
-    }
-
-    // Cerrar el menú desplegable
-    echo '</select>';
-
-          ?>
-
-
-          <!-- <div class="form-group">
-            <label for="telefono" class="form-label">Teléfono</label>
-            <input type="text" placeholder="## #### ####" class="form-control" id="telefono" name="telefono">
-            <div id="telefonoHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div>
           <div class="form-group">
-            <label for="puesto" class="form-label">Puesto:</label>
-            <input type="text" class="form-control" id="puesto" name="puesto" aria-describedby="puestoHelp">
-            <div id="puestoHelp" class="form-text">&nbsp;&nbsp;</div>
-          </div> -->
+            <label for="owner" class="form-label">Dueño:</label>
+            <?php 
+        $stmt = $conn->prepare("SELECT clienteId, nombre, apellidoP FROM pet_care.cliente");
+
+        // Ejecutar la consulta
+        $stmt->execute();
+    
+        // Iniciar el menú desplegable
+        echo '<select class="form-control" id="owner" name="owner">';
+        echo '<option value="">Seleccione</option>';
+    
+        // Iterar sobre los resultados
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            echo '<option value="' . $row['clienteId'] . '">' . $row['nombre'] . ' ' . $row['apellidoP'] . '</option>';
+        }
+    
+        // Cerrar el menú desplegable
+        echo '</select>';
+        
+        ?>
+
+            <div id="correoHelp" class="form-text">&nbsp;&nbsp;</div>
+          </div>
+       
+        
           <button type="submit" class="btn btn-primary" style="width: 150px; position: relative; left: 150px;">Agregar</button>
         </form>
  
@@ -91,4 +85,5 @@ require '../php/database.php';
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
+   

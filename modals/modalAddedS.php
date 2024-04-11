@@ -10,7 +10,7 @@
           </div>
           <img src="../img/icons/check-two.gif" alt="check" height="50px"/>
           <div class="modal-body" id="modal-body">
-            Se ha registrado con exito el servicio:
+            <span class="negritas">Se ha registrado con exito el servicio. </span>
             <br>
             <div id="service-name" style="text-align: center;"></div>
             <div id="service-cost" style="text-align: center;"></div>

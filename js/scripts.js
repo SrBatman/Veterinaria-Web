@@ -193,3 +193,29 @@ function mostrarModalDiscount(){
 function mostrarModalPet(){
   $('#modalAddPet').modal('show');
 };
+
+
+function validarMascotas(){
+  let campos = ['nombre', 'especie', 'raza', 'edad', 'peso', 'sexo', 'owner'];
+
+  let isValid = true;
+   
+    campos.forEach(function(campo) {
+     
+      let input = document.getElementById(campo);
+      console.log(input.value)
+      if (!input.value) {
+      
+        input.classList.add('is-invalid');
+        isValid = false;
+      } else {
+  
+        input.classList.remove('is-invalid');
+      }
+  
+    
+    });
+  
+      return isValid;
+    
+}

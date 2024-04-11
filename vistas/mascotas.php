@@ -74,13 +74,14 @@ $user = new User($conn);
 <h2 class="epictitle">Administracion de mascotas</h2>
 </div>
 <div class="tabla-contenedor">
-
+<!-- <input type="text" id="search" placeholder="Buscar por nombre"/> -->
 <table class="tablita">
 <tr>
     <th>ID</th> 
     <th>Nombre</th> 
     <th>Especie</th> 
     <th>Raza</th> 
+    <th>Estatus</th> 
     <th>Dueño</th> 
     <th>&nbsp;&nbsp;</th>
     <th>&nbsp;&nbsp;</th>
@@ -88,11 +89,10 @@ $user = new User($conn);
 </tr>
 
 
-
 <?php 
 
 
-$stmt = $conn->prepare("SELECT * FROM pet_care.Clientes_y_Mascotas;");
+$stmt = $conn->prepare("SELECT * FROM pet_care.Clientes_y_Mascotas ORDER BY estatus;");
 if (!$stmt) {
     echo "\nPDO::errorInfo():\n";
     error_log("Error en la consulta");
@@ -112,10 +112,11 @@ if(count($results) > 0) {
         echo "<td>".$row['PetName']."</td>";
         echo "<td>".$row['especie']."</td>";
         echo "<td>".$row['raza']."</td>";
-        echo "<td>".$row['OwnerName']."</td>";
+        echo "<td>".$row['estatus']."</td>";
+        echo "<td>".$row['OwnerName']." ".$row['apellidoP']."</td>";
         echo "<td>  <a href=\"./mascotas.php?view&mascotaId=".$row['mascotaId']."&nombre=".$row['PetName']."&especie=".$row['especie']."&raza=".$row['raza']."&edad=".$row['edad']."&peso=".$row['peso']."&sexo=".$row['sexo']."&estatus=".$row['estatus']."&owner=".$row['OwnerName']." ".$row['apellidoP']."\"> Ver </a></td>";
         echo "<td>  <a href=\"./mascotas.php?edit=".$row['mascotaId']."\"> Modificar </a></td>";
-        echo "<td>  <a href=\"./mascotas.php?delete&mascotaId=".$row['mascotaId']."&nombre=".$row['PetName']."&especie=".$row['especie']."&raza=".$row['raza']."&owner=".$row['OwnerName']." \"> Eliminar </a></td>";
+        echo "<td>  <a href=\"./mascotas.php?delete&mascotaId=".$row['mascotaId']."&nombre=".$row['PetName']."&especie=".$row['especie']."&raza=".$row['raza']."&owner=".$row['OwnerName']." ".$row['apellidoP']."\"> Baja </a></td>";
         echo "</tr>";
     }
   
@@ -123,17 +124,29 @@ if(count($results) > 0) {
 ?>
 </table>
 
+
 </div>
+
 <button type="button" class="btn btn-primary" style="position:relative; left:380px; top: 50px;" onclick="mostrarModalPet();">Nueva mascota</button>
 </section>
 
 
-<!-- <?php require '../modals/modalPet.php' ?>
+<?php require '../modals/modalPet.php' ?>
 <?php require '../modals/modalAddedM.php' ?>
 <?php require '../modals/modalDelM.php' ?>
-<?php require '../modals/modalDeleted.php' ?> -->
+<?php require '../modals/modalShowM.php' ?>
+<?php require '../modals/modalDeleted.php' ?>
 
 <script src="../js/scripts.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+<script>
+      function redirigir(){
+        window.location.href = "./empleados.php";
+      }
+</script>
+
+<script src="../js/test.js"></script>
 
 <script>
       function redirigir(){
@@ -148,7 +161,7 @@ if(count($results) > 0) {
     const x = new URLSearchParams(window.location.search);
     if (x.has('delete')){
     let id = x.get('mascotaId');
-    let name = x.get('PetName');
+    let name = x.get('nombre');
     let especie = x.get('especie');
     let raza = x.get('raza');
     let owner = x.get('owner');
@@ -158,7 +171,7 @@ if(count($results) > 0) {
     // Modificar el contenido del cuerpo del modal
     if (id && name && especie && raza && owner) {
         document.getElementById('del-mascota-uno').textContent = `MascotaId: ${id}`;
-        document.getElementById('del-mascota-dos').textContent = `Nombre: ${name}%`;
+        document.getElementById('del-mascota-dos').textContent = `Nombre: ${name}`;
         document.getElementById('del-mascota-tres').textContent = `Especie: ${especie}`;
         document.getElementById('del-mascota-cuatro').textContent = `Raza: ${raza}`;
         document.getElementById('del-mascota-cinco').textContent = `Dueño: ${owner}`;
@@ -224,13 +237,15 @@ if(count($results) > 0) {
     // Obtener los parámetros de la URL
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('res')){
-      let porcentaje  = urlParams.get('porcentaje');
-      let cantidad = urlParams.get('cantidad');
+      let name  = urlParams.get('nombre');
+      let especie = urlParams.get('especie');
+      let raza = urlParams.get('raza');
 
     // Modificar el contenido del cuerpo del modal
-    if (porcentaje && cantidad) {
-        document.getElementById('descuento-porcentaje').textContent = `Descuento: ${porcentaje}%`;
-        document.getElementById('descuento-cantidad').textContent = `Cantidad requerida: ${cantidad}`;
+    if (name && especie && raza) {
+        document.getElementById('mascota-name').textContent = `Nombre: ${name}`;
+        document.getElementById('mascota-especie').textContent = `Especie: ${especie}`;
+        document.getElementById('mascota-raza').textContent = `Raza: ${raza}`;
         let componente = jQuery('#modalExito')
         componente.modal('show')
     }

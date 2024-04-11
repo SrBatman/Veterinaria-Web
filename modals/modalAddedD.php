@@ -10,7 +10,7 @@
           </div>
           <img src="../img/icons/check-two.gif" alt="check" height="50px"/>
           <div class="modal-body" id="modal-body">
-            Se ha registrado con exito el descuento:
+          <span class="negritas">Se ha registrado con exito el descuento. </span>
             <br>
             <div id="descuento-porcentaje" style="text-align: center;"></div>
             <div id="descuento-cantidad" style="text-align: center;"></div>

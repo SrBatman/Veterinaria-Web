@@ -74,8 +74,9 @@ $user = new User($conn);
 <h2 class="epictitle">Administracion de empleados</h2>
 </div>
 <div class="tabla-contenedor">
-<input type="text" id="search" placeholder="Buscar por nombre"/>
+<!-- <input type="text" id="search" placeholder="Buscar por nombre"/> -->
 <table class="tablita">
+<thead>  
 <tr>
     <th>ID</th> 
     <th>Nombre</th> 
@@ -85,9 +86,9 @@ $user = new User($conn);
     <th>&nbsp;&nbsp;</th>
     <th>&nbsp;&nbsp;</th>
 </tr>
+</thead>
 
-
-
+<tbody>
 <?php 
 
 
@@ -107,7 +108,7 @@ if(count($results) > 0) {
   
     foreach ($results as $row) {
         echo "<tr>";
-        echo "<td>".$row['empleadoId']."</td>";
+        echo "<th>".$row['empleadoId']."</th>";
         echo "<td>".$row['nombre']."</td>";
         echo "<td>".$row['apellidoP']." ".$row['apellidoM']."</td>";
         echo "<td>".$row['puesto']."</td>";
@@ -119,12 +120,16 @@ if(count($results) > 0) {
   
 } 
 ?>
+  </tbody>
 </table>
 
 
 </div>
 
-<button type="button" class="btn btn-primary" style="position:relative; left:380px; top: 50px;" onclick="mostrarModal();">Nuevo empleado</button>
+<div class="coolname container">
+<button type="button" class="btn btn-primary" style="position:relative; left:70px;" onclick="mostrarModal();">Nuevo empleado</button>
+
+</div>
 </section>
 <!-- <section class="agregar-datos">
 

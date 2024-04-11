@@ -36,7 +36,7 @@ if(session_status() === PHP_SESSION_NONE) {
         <a class="nav-link" href="../servicios.php">Servicios</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="../facturas.php">Facturas</a>
+        <a class="nav-link" href="../consultas.php">Consultas</a>
       </li>
               </ul>
 <ul class="navbar-nav">

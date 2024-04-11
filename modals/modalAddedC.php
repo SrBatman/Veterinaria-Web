@@ -10,7 +10,7 @@
           </div>
           <img src="../img/icons/check-two.gif" alt="check" height="50px"/>
           <div class="modal-body" id="modal-body">
-            Se ha registrado con exito el cliente:
+          <span class="negritas">Se ha registrado con exito el cliente. </span>
             <br>
             <div id="cliente-name" style="text-align: center;"></div>
           </div>

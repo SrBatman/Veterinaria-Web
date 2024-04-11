@@ -175,6 +175,7 @@ input[type="text"], input[type="password"]{
     padding: 20px;
 }
 
+
 .segunda {
     height: 400px;
     display: flex;
@@ -501,6 +502,26 @@ input[type="text"], input[type="password"]{
     bottom: 100px;
 
 }
+
+
+.factura-contenedor {
+    height: 1000px;
+    margin-top: 100px;
+}
+
+.table th {
+    background-color: #8a4e92;
+    color: white;
+}
+
+.table th, .tablita td {
+    border: 1px solid #070427;
+    padding: 8px;
+    text-align: left;
+}
+
+
+
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
 	.cta {

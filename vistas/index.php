@@ -57,19 +57,65 @@ $user = new User($conn);
   <body>
     <?php require '../php/header.php' ?>
 
-    <?php if(!empty($user->user)): ?>
-      
-      <br> ¡Bienvenid@ de vuelta <?= $user->user['usuario']; ?>!
-      <br>Haz iniciado sesion de manera satisfactoria.
-      <a href="logout.php">
-        Cerrar Sesion
-      </a> 
-    <?php else: ?>
-      <h1>Iniciar sesion o registrarse</h1>
+    <div class="factura-contenedor">
+      <div class="select-client container">
+        <div class="client-text">
+          <h4>Cliente</h4>
+        </div>
+      <?php 
+        $stmt = $conn->prepare("SELECT clienteId, nombre, apellidoP FROM pet_care.cliente");
 
-      <a href="login.php">Iniciar sesion</a> or
-      <a href="signup.php">Registrarse</a>
-    <?php endif; ?>
+        // Ejecutar la consulta
+        $stmt->execute();
+    
+        // Iniciar el menú desplegable
+        echo '<select  id="owner" name="owner">';
+        echo '<option value="">Seleccione</option>';
+    
+        // Iterar sobre los resultados
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            echo '<option value="' . $row['clienteId'] . '">' . $row['nombre'] . ' ' . $row['apellidoP'] . '</option>';
+        }
+    
+        // Cerrar el menú desplegable
+        echo '</select>';
+        
+        ?>
+
+        <div class="more-text" >
+          <h5>¿No encuentras al cliente? <a href="./clientes.php">Agregalo aquí</a></h5> 
+        </div>
+
+      </div>
+      <div class="boxbox container">
+        <h6>Acerca de la consulta</h6>
+         <div class="table container">
+         <table class="table">
+          <thead>
+    <tr>
+      <th scope="col">MascotaId</th>
+      <th scope="col">Nombre de la mascota</th>
+      <th scope="col">Servicio(s)</th>
+      <th scope="col">Total por servicios</th>
+    </tr>
+        </thead>
+  <tbody>
+
+  </tbody>
+</table>
+
+         </div>
+         <button type="button" class="btn btn-primary" style="position:relative; left:10px;" onclick="mostrarModal();">Agregar paciente</button>
+      </div>
+
+      <div class="detalles container">
+        <div class="cajaowo">
+
+        </div>
+
+      </div>
+
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"> </script>
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
