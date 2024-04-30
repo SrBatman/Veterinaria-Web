@@ -226,11 +226,11 @@ document.getElementById('serviciosSelect').addEventListener('change', function()
     
   } else {
     // Si el valor no está en el array, lo agregamos
-   
-    seleccionados.push(valorSeleccionado);
+    if (valorSeleccionado.length) seleccionados.push(valorSeleccionado);
+    
   }
 
-  //this.value = "";
+  // seleccionados = seleccionados.filter((e) => e !== "");
 
   document.getElementById('caja-de-servicios').textContent = seleccionados.map((e) => e.split("_")[1]).join(' , ');
  

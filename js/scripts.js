@@ -238,10 +238,14 @@ function validarMascotas(){
     
 }
 
-function validarPacientes(){
+let listaPets = [];
+
+function validarPacientes(e){
   let campos =['mascotas', 'serviciosSelect'];
+
+
   let isValid = true;
-   
+    e.preventDefault();
     campos.forEach(function(campo) {
      
       let input = document.getElementById(campo);
@@ -256,9 +260,15 @@ function validarPacientes(){
   
         input.classList.remove('is-invalid');
       }
+      
   
     
     });
-  
-      return isValid;
+    
+    console.log(seleccionados)
+    if (isValid){
+      let mascota = document.getElementById('mascotas').value;
+      listaPets.push({mascotaId: mascota, servicios: seleccionados});
+      window.location.href = `./index.php`;
+    }
 }

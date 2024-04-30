@@ -13,7 +13,7 @@
           <div class="modal-body" id="modal-body">
           <div style="width: 500px; height: 500px; margin: auto;">
 
-        <form method="post" action="../controllers/tablecontrol.php" onsubmit="return validarPacientes();">
+        <form method="post" onsubmit="return validarPacientes(event);">
           <div class="form-group">
             <label for="nombre" class="form-label">Mascota:</label>
             <?php 
